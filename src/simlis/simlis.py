@@ -73,7 +73,7 @@ def main():
         args.output = Path(f"{pack.name}.csv")
         print(f"Saving output to {args.output}")
 
-    with args.output.open("w", newline="") as csvfile:
+    with args.output.open("w", encoding="utf-8", newline="") as csvfile:
         fields = ["Charter", "Song Title", "Song Artist", "B", "B Tech", "E", "E Tech", "M", "M Tech", "H", "H Tech", "X", "X Tech"]
         writer = csv.DictWriter(csvfile, fieldnames=fields)
         writer.writeheader()
