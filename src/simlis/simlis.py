@@ -39,8 +39,8 @@ def list_sims(pack):
         }
 
         for chart in sim.charts:
-            if chart.difficulty == "EDIT":
-                print(f"{sim.artist} - {sim.title}: skipping EDIT chart")
+            if chart.difficulty == "Edit":
+                print(f"{sim.artist} - {sim.title}: skipping Edit chart")
 
             diff = DIFF_MAP[chart.difficulty]
             sim_data["Charter"].append((diff, chart.credit))
