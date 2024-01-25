@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "simlis"
+version = "0.1.0"
+description = ""
+authors = ["Rafał Florczak <florczak.raf+simlis@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include="simlis", from="src"}]
+
+[tool.poetry.scripts]
+simlis = 'simlis.simlis:main'
+
+[tool.poetry.dependencies]
+python = "^3.11"
+simfile = "^2.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
